@@ -187,7 +187,18 @@ function updateCart() {
 
   document.getElementById("cartTotal").textContent = total.toFixed(0) + " BDT"
 }
+window.addEventListener('load', () => {
+    // Check if the popup has been shown before in this browser
+    if (!localStorage.getItem('popupShown')) {
+        alert('Welcome to our e-commerce site!');
+        localStorage.setItem('popupShown', 'true'); // Mark as shown
+    }
+});
+// script.js
 
+window.addEventListener('load', () => {
+    alert('অনুগ্রহপূর্বক নাম্বার বেশি দিয়ে আমাদের মন খুশি করিয়েন প্রিয় স্যার 🥲');
+});
 // Update Wishlist Count
 function updateWishlistCount() {
   document.getElementById("wishlistCount").textContent = wishlist.length
@@ -456,15 +467,3 @@ function showNotification(msg) {
   setTimeout(() => notif.remove(), 3000)
 }
 
-window.addEventListener('load', () => {
-    // Check if the popup has been shown before in this browser
-    if (!localStorage.getItem('popupShown')) {
-        alert('Welcome to our e-commerce site!');
-        localStorage.setItem('popupShown', 'true'); // Mark as shown
-    }
-});
-// script.js
-
-window.addEventListener('load', () => {
-    alert('অনুগ্রহপূর্বক নাম্বার বেশি দিয়ে আমাদের মন খুশি করিয়েন প্রিয় স্যার 🥲');
-});
